@@ -1,0 +1,41 @@
+@mixin commonText {
+	font: {
+		family: $textFont;
+		size: $textFontSizeMain;
+	};
+}
+
+@mixin ubuntuText {
+	font: {
+		family: $headerFont;
+		size: $textFontSizeMain;
+	};
+};
+
+@mixin footerContacts {
+	font: {
+		family: $textFont;
+		size: $textFontSizeSmall;
+	}	
+};
+
+@mixin linerGradient ($pos, $rgbaB, $rgbaE) {
+	background: -moz-linear-gradient($pos, $rgbaB, $rgbaE);
+    background: -webkit-linear-gradient($pos, $rgbaB, $rgbaE);
+    background: -o-linear-gradient($pos, $rgbaB, $rgbaE);
+    background: -ms-linear-gradient($pos, $rgbaB, $rgbaE);
+}
+
+@mixin servicesHover ($prop, $dur, $timing) {
+	-webkit-transition: $prop $dur $timing;
+    -moz-transition: $prop $dur $timing;
+    -o-transition: $prop $dur $timing;
+	transition: $prop $dur $timing;
+}
+
+@mixin fontHeaders () {
+	font: {
+			family: $headerFont;
+			size: 24px;
+		}
+}

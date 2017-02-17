@@ -1,0 +1,73 @@
+/* -----SERVICES----- */
+.services {
+	margin-top: 90px;
+	background-color: #2a2d32;
+	padding-top: 7px;
+	h2 {
+		@include fontHeaders();
+		color: #fff;
+		margin: 36px 0 55px 0;
+	}
+}
+.serices__field {
+}
+.services__items {
+	float: left;
+	width: 255px;
+	margin-left: 4%;
+	&:first-child {
+		margin-left: 0;
+	}
+	a {
+		display: block;
+		position: relative;
+		text-decoration: none;
+		color: #fff;
+		text-align: center;
+		font: {
+			family: $headerFont;
+			size: 16px;
+		}
+		p{
+			margin-top: 35px;
+   			margin-bottom: 70px;
+   			@include servicesHover(color, 0.3s, ease-out);
+		}
+		.hover-bgc {
+			width: 255px;
+		    height: 255px;
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    background-color: #248cec;
+		    opacity: 0;
+		    visibility: hidden;
+		    font-family: "Ubuntu Light";
+		    font-size: 100px;
+		    color: #fff;
+		    padding-top: 25%;
+		    box-sizing: border-box;
+		    @include servicesHover(visibility, 0.3s, ease-out);
+		    @include servicesHover(opacity, 0.3s, ease-out);
+		}
+		&:hover .hover-bgc{
+			visibility: visible;
+			opacity: 0.9;
+		}
+		&:hover p {
+			color: #f4b60d;
+		}
+	}
+}
+.services__img {
+	height: 255px;
+    overflow: hidden;
+}
+.services__img--img1 img {
+    	margin-left: -175px;
+}
+.services__img--img2 img {
+    	margin-left: -100px;
+}
+	
+
