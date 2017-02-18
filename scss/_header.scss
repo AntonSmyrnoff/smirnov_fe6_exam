@@ -1,207 +1,75 @@
- /* -----HEADER----- */
- .header__logo {
- 	float: left;
- 	font: {
- 		family: $headerFont;
- 	};
- 	color: #434343;
- 	div {
- 		display: inline-block;
- 		vertical-align: middle;
- 	}
-	h1 {
-		font-size: $logoFontSize;
-		}
-	h2 {
-		color: #333;
-		font-size: 12px;
-		text-transform: uppercase;
-		opacity: 0.65;
-		margin-left: 2px;
-		letter-spacing: 2px;
-	}
- }
-.header__logoPicture {
- 	width: 40px;
- 	height: 40px;
- 	overflow: hidden;
-    background: rgba(233, 148, 0, 1);
-    @include linerGradient (top, rgba(233, 148, 0, 1) 0%, rgba(255,202,63,1) 100%);
-    background: linear-gradient(to bottom, rgba(233, 148, 0, 1) 0%, rgba(255,202,63,1) 100%);
-	.fa {
-	 	font-size: 240%;
-	 	margin-left: 60%;
-	 	margin-top: 1px;
-	 	color: #fff;
-	 }
+.promo {
+	width: 320px;
+	background: url(../img/header-bg.jpg) 52% no-repeat;
+	background-size: cover;
+	font-family: $textHeaders; 
+	text-align: center;
+	box-shadow: 0 0 0 270px rgba(26, 25, 21, 0.2) inset;
+	filter: contrast(120%);
+
 }
-.header__social {
-	float: right;
-	margin-top: 15px;
-	padding-right: 8px;
-	a{
-		text-decoration: none;
-		color: #000;
-	}
-	.fa {
-		margin-left: 13px;
-		opacity: 0.2;
-		font-size: 18px;
-		&:hover {
-			opacity: 1;
-		}
-	}
-}
-.fa-facebook:hover {
-	color: #4867aa;
-}
-.fa-twitter:hover {
-	color: #41abe1;
-}
-.fa-rss:hover {
-	color: #fb7629;
-}
-.fa-linkedin:hover {
-	color: #0077b5;
-}
-.fa-skype:hover {
-	color: #00aff0;
-}
-.header__navbar {
-	background-color: #2a2d32;
-	margin-top: 35px;
-	nav {
+
+.promo__sign {
+	@include buttonText;
+	color: #fff;
+	padding: 32px 73px;
+	p {
 		float: left;
-		ul{
-			li {
-				float: left;
-				padding: 20px 39px;
-				border-right: 1px solid #181a1d;
-				a{
-					text-decoration: none;
-					color: $navbarTextColor;
-					text-transform: uppercase;
-					font-family: $menuFont;
-					font-size: 14px;
-					&:hover {
-						color: #f4b60d;
-					}
-				}
-				&.active {
-					background-color: #248cec;
-					a:hover {
-						color: $navbarTextColor;
-					}
-				}
-			}
+		a {
+			color: #fff;
+			text-decoration: none;
 		}
 	}
-}
-.header__search {
-	float: right;
-	border: 1px solid #181a1d;
-	background-color: #35383c;
-	width: 240px;
-	height: 38px;
-	margin: 8px 8px 8px 0;
-	padding: 8px;
-	box-sizing: border-box;
-	input {
-		background-color: transparent;
-		color: $navbarTextColor;
-		font-size: $textFontSizeSmall;
-		border: none; 
-		outline: none;
-		opacity: 0.3;
-		&:focus {
-			opacity: 1;
-		}
-	}
-	.fa {
-		float: right;
-		color: $navbarTextColor;
-		opacity: 0.3;
-		margin: 2px 5px 0 0;
-		&:hover{
-			cursor: pointer;
-		}
+	p:nth-child(2) {
+		margin-left: 20px;
+	    margin-top: -11px;
+	    padding: 9px 16px;
+	    border-radius: 20px;
+		border: 2px solid #fff;
 	}
 }
-.header__slider {
-	position: relative;
-	overflow: hidden;
-	margin-top: 40px;
-	height: $sliderHeight;
+
+.promo__logo {
+	font-family: $textHeaders;
+	font-size: 20px;
+	color: #fff;
+	margin-top: 84px;
+	letter-spacing: 1px;
 }
-.slider-wrapper {
-	position: absolute;
-	top: 0;
-	left: 0;
-	overflow: hidden;
-	z-index: -1;
-	width: 100%;
-}
-.jcarousel {
-    position: relative;
-    overflow: hidden;
-}
-.jcarousel ul {
-    width: 20000em;
-    position: relative;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.jcarousel li {
-    float: left;
-    img {
-    	margin: -200px 0 0 -70px;
-    }
-}
-.jcarousel-pagination {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    margin: 0;
-	a {
-	    text-decoration: none;
-	    display: inline-block;
-	    font-size: 11px;
-	    height: 15px;
-	    width: 15px;
-	    line-height: 15px;
-	    background: #fff;
-	    text-indent: -9999px;
-	    margin-right: 15px;
-	    &.active {
-		    background: #000;
-		    color: #fff;
-	    }
+
+.promo__tagline {
+	color: #fff;
+	h2 {
+		text-transform: uppercase;
+		font-size: 30px;
+		margin-top: 30px;
+		line-height: 36px;
+		color: #fff;
 	}
-}
-.header__sliderText {
-	float: left;
-	margin-top: 235px;
-    padding: 29px;
-    padding-top: 17px;
-    margin-left: 33px;
-    background: url(../img/bg-slider-text.png) no-repeat;
 	p {
 		font: {
-			family: $headerFont;
-			size: 54px;
-		};
-		color: #fff;
-		text-transform: uppercase;
-		&:first-child {
-			color: #f4b60d;
+			family: $text;
+			size: 18px;
 		}
+		margin-top: 9px;
+    	padding: 0 34px;
+    	line-height: 21px;
 	}
 }
 
+.promo__button {
+	margin: 16px 10px;
+	padding-bottom: 138px;
+	a {
+		display: block;
+		@include buttonText;
+		color: #fff;
+		text-decoration: none;
+		padding: 13px;
+		background-color: #ff4e50;
+		border-radius: 20px;
 
 
-
-
-
+	}
+}
 

@@ -1,13 +1,12 @@
-body {
-	font-family: $textFont;
-}
-
 .container {
-	max-width: 1160px;
+	width: 300px;
 	margin: 0 auto;
-	margin-top: 35px;
 }
 
 .clearfix {
 	clear: both;
+}
+
+h2 {
+	@include headersText;
 }
