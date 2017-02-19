@@ -11,5 +11,12 @@
 		family: $textHeaders;
 		size: $textSize;
 	};
-}
+};
+
+@mixin paragraph {
+	font: {
+		family: $text;
+		size: $textSize;
+	};
+} 
 

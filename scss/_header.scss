@@ -1,5 +1,5 @@
+/* ----- HEADER----- */
 .promo {
-	width: 320px;
 	background: url(../img/header-bg.jpg) 52% no-repeat;
 	background-size: cover;
 	font-family: $textHeaders; 
@@ -66,10 +66,8 @@
 		color: #fff;
 		text-decoration: none;
 		padding: 13px;
-		background-color: #ff4e50;
+		background-color: $bgColor;
 		border-radius: 20px;
-
-
 	}
 }
 

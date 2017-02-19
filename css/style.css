@@ -130,9 +130,13 @@ table {
   src: url("../fonts/roboto-thinitalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-thinitalic-webfont.woff2") format("woff2"), url("../fonts/roboto-thinitalic-webfont.woff") format("woff"), url("../fonts/roboto-thinitalic-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
+body > * {
+  width: 320px; }
+
 .container {
   width: 300px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  text-align: center; }
 
 .clearfix {
   clear: both; }
@@ -140,10 +144,10 @@ table {
 h2 {
   font-family: "Montserrat Bold";
   font-size: 22px;
-  color: #ccc; }
+  color: #333; }
 
+/* ----- HEADER----- */
 .promo {
-  width: 320px;
   background: url(../img/header-bg.jpg) 52% no-repeat;
   background-size: cover;
   font-family: "Montserrat Bold";
@@ -202,5 +206,52 @@ h2 {
     padding: 13px;
     background-color: #ff4e50;
     border-radius: 20px; }
+
+.how-works {
+  margin-top: 31px; }
+
+.how-works__step {
+  text-align: left;
+  padding-left: 21px;
+  border-radius: 4px; }
+  .how-works__step h3 {
+    font-family: 'Montserrat Regular';
+    font-size: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #ff4e50;
+    padding: 5px 11px 5px 15px;
+    display: inline-block;
+    border-radius: 20px;
+    letter-spacing: 2px; }
+  .how-works__step h4 {
+    font-family: "Montserrat Bold";
+    font-size: 24px;
+    color: #fff;
+    margin: 15px 0 12px 0;
+    line-height: 29px; }
+  .how-works__step p {
+    font-family: "Roboto Light";
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    line-height: 16px;
+    padding-bottom: 18px; }
+
+.how-works__step--step1 {
+  background: url(../img/how-works-step1-bg.jpg) no-repeat;
+  margin-top: 16px;
+  padding-top: 69px; }
+
+.how-works__step--step2 {
+  background: url(../img/how-works-step2-bg.jpg) no-repeat;
+  margin-top: -10px;
+  padding-top: 100px; }
+
+.how-works__step--step3 {
+  background: url(../img/how-works-step3-bg.jpg) no-repeat;
+  margin-top: -12px;
+  padding-top: 70px; }
 
 /*# sourceMappingURL=style.css.map */
