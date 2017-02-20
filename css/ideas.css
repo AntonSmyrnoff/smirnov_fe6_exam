@@ -1,0 +1,27 @@
+.partners__img {
+  background: url(../img/partners-1.jpg) 100% no-repeat;
+  background-size: cover;
+  height: 120px;
+  width: 120px;
+  border-radius: 100%;
+  position: relative; }
+  .partners__img div {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0; }
+
+.fa-television {
+  height: 32px;
+  width: 32px;
+  padding-top: 7px;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #ff4e50;
+  border-radius: 100%;
+  margin-top: 4px; }
+
+/*# sourceMappingURL=ideas.css.map */
