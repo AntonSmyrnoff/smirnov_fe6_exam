@@ -15,3 +15,13 @@ body>* {
 h2 {
 	@include headersText;
 }
+
+.button {
+	a {
+		display: block;
+		@include buttonText;
+		text-decoration: none;
+		padding: 11px;
+		border-radius: 20px;
+	}
+}
