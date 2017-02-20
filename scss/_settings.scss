@@ -17,11 +17,11 @@ h2 {
 }
 
 .button {
+	width: 280px;
 	a {
 		display: block;
 		@include buttonText;
 		text-decoration: none;
-		padding: 11px;
 		border-radius: 20px;
 	}
 }

@@ -1,48 +1,35 @@
-$(function() {
-    $('.jcarousel').jcarousel({
-        wrap: 'circular',
-        animation: "slow"
-    })
-    .jcarouselAutoscroll({
-            interval: 5000,
-            target: '+=1',
-            autostart: true
-        });
-    $('.jcarousel').jcarousel({
-        animation: {
-            duration: 1200,
-            easing:   'linear',
-            complete: function() {
-            }
-        }
+$(function () {
+
+        /*$('.grid').isotope({
+          itemSelector: '.grid-item',
+          masonry: {
+            columnWidth: 300
+          }
+        });*/
+
+    var arr = [];
+    var response = $.ajax({
+       url: "http://api.pixplorer.co.uk/image?amount=7&size=tb",
+       dataType : "JSON",
+       success: function(data) {
+        console.log(data);
+        $.each(data.images, function(i, val){
+                            var div = document.createElement("div");
+
+                            div.classList.add('grid-item');
+                            if(i==4||i==5) {
+                                div.classList.add('grid-item--width2') 
+                            };
+                            div.style.background = 'url('+data.images[i].imageurl+') no-repeat 50%';
+                            $('#wrapper').append(div);
+                          
+                        });
+
+       }
     });
 
-    /*Навигация по карусели*/
-    $('.jcarousel-pagination')
-            .on('jcarouselpagination:active', 'a', function() {
-                $(this).addClass('active');
-            })
-            .on('jcarouselpagination:inactive', 'a', function() {
-                $(this).removeClass('active');
-            })
-            .on('click', function(e) {
-                e.preventDefault();
-            })
-            .jcarouselPagination({
-                perPage: 1,
-                item: function(page) {
-                    return '<a href="#' + page + '">' + page + '</a>';
-                }
-            });
-});
 
-/*Выпадающий текст в Banners Place*/
-$(function() {
-    $('.banners__panel').click(function() {
-        $(this).find('.banners__wrapper div').toggleClass('active');
-        $(this).find('p').slideToggle(500);
-        $(this).find('.banners__sign').toggle();
-    })
+    
 });
 
 

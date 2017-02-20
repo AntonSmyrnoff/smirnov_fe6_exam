@@ -61,13 +61,10 @@
 	margin: 16px 10px;
 	padding-bottom: 138px;
 	a {
-		display: block;
-		@include buttonText;
 		color: #fff;
-		text-decoration: none;
-		padding: 13px;
 		background-color: $bgColor;
-		border-radius: 20px;
+		padding: 13px;
+
 	}
 }
 

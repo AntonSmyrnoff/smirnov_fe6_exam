@@ -8,6 +8,7 @@
 }
 
 .partners__item {
+	width: 100%;
 	a {
 		text-decoration: none;
 		display: block;
@@ -91,11 +92,12 @@
 }
 
 .partners__button {
-	margin: 16px 10px;
-	padding-bottom: 40px;
+	margin: 28px 11px 28px 7px;
 	a {
 		color: $bgColor;
 		border: 2px solid $bgColor;
+		padding: 11px;
+
 	}
 }
 

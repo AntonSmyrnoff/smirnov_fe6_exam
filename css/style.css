@@ -146,13 +146,14 @@ h2 {
   font-size: 22px;
   color: #333; }
 
-.button a {
-  display: block;
-  font-family: "Montserrat Bold";
-  font-size: 14px;
-  text-decoration: none;
-  padding: 11px;
-  border-radius: 20px; }
+.button {
+  width: 280px; }
+  .button a {
+    display: block;
+    font-family: "Montserrat Bold";
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 20px; }
 
 /* ----- HEADER----- */
 .promo {
@@ -206,14 +207,9 @@ h2 {
   margin: 16px 10px;
   padding-bottom: 138px; }
   .promo__button a {
-    display: block;
-    font-family: "Montserrat Bold";
-    font-size: 14px;
     color: #fff;
-    text-decoration: none;
-    padding: 13px;
     background-color: #ff4e50;
-    border-radius: 20px; }
+    padding: 13px; }
 
 .how-works {
   margin-top: 31px; }
@@ -221,7 +217,8 @@ h2 {
 .how-works__step {
   text-align: left;
   padding-left: 19px;
-  border-radius: 4px; }
+  border-radius: 4px;
+  width: 100%; }
   .how-works__step h3 {
     font-family: 'Montserrat Regular';
     font-size: 10px;
@@ -243,7 +240,7 @@ h2 {
     font-size: 14px;
     color: #ccc;
     margin-bottom: 20px;
-    margin-right: 10px;
+    margin-right: 27px;
     line-height: 16px;
     padding-bottom: 18px; }
 
@@ -269,21 +266,23 @@ h2 {
     line-height: 26px;
     margin-bottom: 15px; }
 
-.partners__item a {
-  text-decoration: none;
-  display: block; }
-.partners__item h3 {
-  font-family: "Montserrat Bold";
-  font-size: 14px;
-  color: #333;
-  margin-top: 20px;
-  margin-left: -2px; }
-.partners__item p {
-  font-family: "Roboto Light";
-  font-size: 14px;
-  color: #666;
-  margin: 14px 44px 26px 36px;
-  line-height: 17px; }
+.partners__item {
+  width: 100%; }
+  .partners__item a {
+    text-decoration: none;
+    display: block; }
+  .partners__item h3 {
+    font-family: "Montserrat Bold";
+    font-size: 14px;
+    color: #333;
+    margin-top: 20px;
+    margin-left: -2px; }
+  .partners__item p {
+    font-family: "Roboto Light";
+    font-size: 14px;
+    color: #666;
+    margin: 14px 44px 26px 36px;
+    line-height: 17px; }
 
 .partners__img {
   background-size: cover;
@@ -340,10 +339,19 @@ h2 {
     padding-left: 2px; }
 
 .partners__button {
-  margin: 16px 10px;
-  padding-bottom: 40px; }
+  margin: 28px 11px 28px 7px; }
   .partners__button a {
     color: #ff4e50;
-    border: 2px solid #ff4e50; }
+    border: 2px solid #ff4e50;
+    padding: 11px; }
+
+.ideas {
+  margin-top: 35px; }
+  .ideas h2 {
+    line-height: 25px; }
+
+.grid-item {
+  background-size: cover;
+  height: 120px; }
 
 /*# sourceMappingURL=style.css.map */
