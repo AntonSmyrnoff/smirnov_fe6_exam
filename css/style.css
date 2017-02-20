@@ -254,30 +254,78 @@ h2 {
   margin-top: -12px;
   padding-top: 70px; }
 
+.partners {
+  margin-top: 40px; }
+  .partners h2 {
+    margin-left: -7px;
+    line-height: 26px;
+    margin-bottom: 15px; }
+
+.partners__item h3 {
+  font-family: "Montserrat Bold";
+  font-size: 14px;
+  color: #333;
+  margin-top: 20px;
+  margin-left: -2px; }
+.partners__item p {
+  font-family: "Roboto Light";
+  font-size: 14px;
+  color: #666;
+  margin: 14px 44px 26px 36px;
+  line-height: 17px; }
+
 .partners__img {
-  background: url(../img/partners-1.jpg) 100% no-repeat;
   background-size: cover;
   height: 120px;
   width: 120px;
   border-radius: 100%;
-  position: relative; }
+  position: relative;
+  margin: 0 auto; }
   .partners__img div {
     height: 40px;
     width: 40px;
     border-radius: 100%;
     background-color: #fff;
     position: absolute;
-    bottom: 0;
-    right: 0; }
+    bottom: -5px;
+    right: -3px; }
+    .partners__img div .fa {
+      height: 32px;
+      width: 32px;
+      box-sizing: border-box;
+      color: #fff;
+      border-radius: 100%; }
 
-.fa-television {
-  height: 32px;
-  width: 32px;
-  padding-top: 7px;
-  box-sizing: border-box;
-  color: #fff;
-  background-color: #ff4e50;
-  border-radius: 100%;
-  margin-top: 4px; }
+.partners__img--img1 {
+  background: url(../img/partners-1.jpg) 100% no-repeat; }
+  .partners__img--img1 .fa {
+    background-color: #ff4e50;
+    margin-top: 4px;
+    padding-top: 8px;
+    padding-left: 2px; }
+
+.partners__img--img2 {
+  background: url(../img/partners-2.jpg) 100% no-repeat; }
+  .partners__img--img2 .fa {
+    background-color: #ffa507;
+    margin-top: 4px;
+    padding-top: 8px;
+    padding-left: 2px; }
+
+.partners__img--img3 {
+  background: url(../img/partners-3.jpg) 100% no-repeat; }
+  .partners__img--img3 .fa {
+    background-color: #1cd7ad;
+    margin-top: 4px;
+    padding-top: 8px;
+    padding-left: 2px; }
+
+.partners__img--img4 {
+  background: url(../img/partners-4.jpg) 100% no-repeat; }
+  .partners__img--img4 .fa {
+    background-color: #4e73db;
+    margin-top: 4px;
+    padding-top: 8px;
+    padding-left: 2px; }
 
 /*# sourceMappingURL=style.css.map */

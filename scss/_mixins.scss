@@ -1,12 +1,19 @@
 @mixin headersText {
 	font: {
 		family: $textHeaders;
-		size: $rextSizeHeaders;
+		size: $textSizeHeaders;
 	};
 	color: $colorHeaders;
 }
 
 @mixin buttonText {
+	font: {
+		family: $textHeaders;
+		size: $textSize;
+	};
+};
+
+@mixin subheaders {
 	font: {
 		family: $textHeaders;
 		size: $textSize;
