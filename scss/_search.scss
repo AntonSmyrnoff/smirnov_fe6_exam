@@ -1,0 +1,33 @@
+.search {
+	margin-top: 28px;
+    line-height: 25px;
+	p {
+		font-family: $text;
+		font-size: 18px;
+		color: #333;
+		margin-top: 10px;
+	}
+	input {
+		width: 280px;
+	    padding: 10px 13px;
+	    box-sizing: border-box;
+	    margin-top: 14px;
+	    border: 1px solid #ccc;
+	    border-radius: 5px;
+	    @include paragraph;
+	    color: #999;
+	    &:focus {
+	    	color: #333;
+	    }
+	}
+}
+
+.search__button {
+    margin: 9px auto;
+    @include buttonText;
+    color: #fff;
+    background-color: $bgColor;
+    padding: 7px 0;
+    border-radius: 20px;
+    cursor: pointer;
+}

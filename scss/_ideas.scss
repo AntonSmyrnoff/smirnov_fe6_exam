@@ -1,3 +1,7 @@
+.ideas__pictures {
+	margin-top: 15px;
+}
+
 .ideas {
 	margin-top: 35px;
 	h2 {
@@ -9,4 +13,21 @@
 .grid-item {
 	height: 120px;
 	width: 100%;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	box-sizing: border-box;
+	box-shadow: 0 0 0 150px rgba(26, 25, 21, 0.2) inset;
+	filter: contrast(120%);
+	display: table;
+	padding: 0 10px;
+	a {
+		@include headersText;
+		text-decoration: none;
+		display: inline-block;
+		color: #fff;
+		display: table-cell;
+		vertical-align: middle;
+		text-transform: capitalize;
+		line-height: 26px;
+	}
 }
