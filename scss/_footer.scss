@@ -1,51 +1,52 @@
-.footer__divide {
-	margin-top: 41px;
-	height: 4px;
-	width: 100%;
-	background-color: $bgColor;
-}
 
-.footer__logo {
-	margin-top: 18px;
-	a {
-		font-family: $textHeaders;
-		font-size: 16px;
-		color: $bgColor;
-	    letter-spacing: 1px;
-	    text-decoration: none;
+	.footer__divide {
+		margin-top: 41px;
+		height: 4px;
+		width: 100%;
+		background-color: $bgColor;
 	}
-}
 
-.footer__links {
-	h4 {
-		@include headersText;
-		font-size: 14px;
-		margin-top: 16px;
+	.footer__logo {
+		margin-top: 18px;
+		a {
+			font-family: $textHeaders;
+			font-size: 16px;
+			color: $bgColor;
+		    letter-spacing: 1px;
+		    text-decoration: none;
+		}
 	}
-	ul {
-		list-style: none;
-		@include paragraph;
-		margin-top: 5px;
-		li {
-			display: inline-block;
-			margin-right: 10px;
-			a {
-				text-decoration: none;
-				color: #666;
+
+	.footer__links {
+		h4 {
+			@include headersText;
+			font-size: 14px;
+			margin-top: 16px;
+		}
+		ul {
+			list-style: none;
+			@include paragraph;
+			margin-top: 5px;
+			li {
+				display: inline-block;
+				margin-right: 10px;
+				a {
+					text-decoration: none;
+					color: #666;
+				}
 			}
 		}
 	}
-}
 
-.footer__designer {
-	margin-top: 16px;
-	font-family: $textHeaders;
-	font-size: 10px;
-	color: #ccc;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	img {
-		margin-top: 8px;
+	.footer__designer {
+		margin-top: 16px;
+		font-family: $textHeaders;
+		font-size: 10px;
+		color: #ccc;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		img {
+			margin-top: 8px;
+		}
+
 	}
-
-}

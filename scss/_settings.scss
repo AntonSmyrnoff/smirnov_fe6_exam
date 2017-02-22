@@ -1,11 +1,22 @@
 body>* {
-	width: 320px;
+	margin: auto;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 768px;// удалить после завершения верстки для планшета
 }
 
 .container {
-	width: 300px;
 	margin: 0 auto;
 	text-align: center;
+	width: 300px;
+	@include respond-to(tablet) {
+		width: 97%;
+		max-width: 748px
+	};
+	/* @include respond-to(desktop) {
+		width: 98%;
+		max-width: 940px;
+	} */
 }
 
 .clearfix {
@@ -18,6 +29,12 @@ h2 {
 
 .button {
 	width: 280px;
+	@include respond-to(tablet) {
+		width: 225px;
+	};
+	/* @include respond-to(desktop) {
+		width: 225px;
+	} */
 	a {
 		display: block;
 		@include buttonText;

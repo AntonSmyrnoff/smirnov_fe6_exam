@@ -2,7 +2,9 @@ $(function () {
 
   init();
   $('#search').on('click', searchPic);
-
+  $("#search-field").keypress(function(e) { //запуск поиска по нажатию Enter;
+           if(e.keyCode==13) searchPic()
+         });
 });
 
   
@@ -31,10 +33,10 @@ $(function () {
 
   
   function searchPic() {
-        $('.grid-item').remove(); //очищаем результаты предыдущего поиска
       
           var txt = $("#search-field").val();
           if (txt==0) {return};
+          $('.grid-item').remove(); //очищаем результаты предыдущего поиска
           
           $.ajax({
              url: "https://pixabay.com/api/?key=3981741-7a8eb8522a5415851535e06c2&q="+txt+"&image_type=photo&per_page=7",
