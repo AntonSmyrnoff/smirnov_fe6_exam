@@ -1,5 +1,9 @@
+/* ----- HOW WORKS----- */
 .how-works {
 	margin-top: 31px;
+	@include respond-to(tablet) {
+		margin-top: 97px;
+	};
 }
 
 .how-works__step {
@@ -7,6 +11,20 @@
 	padding-left: 19px;
 	border-radius: 4px;
 	width: 100%;
+	box-sizing: border-box;
+	@include respond-to(tablet) {
+		float: left;
+    	width: 31.5%;
+    	height: 400px;
+    	margin-right: 2.75%;
+    	margin-top: 36px;
+    	position: relative;
+    	div {
+    		position: absolute;
+    		bottom: 0;
+    		width: 95%;
+    	}
+	};
 	h3 {
 		font-family: 'Montserrat Regular';
 		font-size: 10px;
@@ -29,27 +47,43 @@
 		@include paragraph;
 		color: #ccc;
 		margin-bottom: 20px;
-		margin-right: 27px;
+		margin-right: 22px;
     	line-height: 16px;
     	padding-bottom: 18px;
+    	@include respond-to(tablet) {
+			padding-bottom: 0;
+		};
 	}
 }
 
 .how-works__step--step1 {
-	background:url(../img/how-works-step1-bg.jpg) no-repeat;
+	background:url(../img/how-works-step1-bg-mobile.jpg) no-repeat;
 	margin-top: 16px;
 	padding-top: 70px;
+	@include respond-to(tablet) {
+		background:url(../img/how-works-step1-bg.jpg) 50% no-repeat;
+		margin-top: 36px;
+	};
 
 }
 
 .how-works__step--step2 {
-	background:url(../img/how-works-step2-bg.jpg) no-repeat;
+	background:url(../img/how-works-step2-bg-mobile.jpg) no-repeat;
 	margin-top: -11px;
     padding-top: 100px;
+    @include respond-to(tablet) {
+		background:url(../img/how-works-step2-bg.jpg) 50% no-repeat;
+		margin-top: 36px;
+	};
 }
 
 .how-works__step--step3 {
-	background:url(../img/how-works-step3-bg.jpg) no-repeat;
+	background:url(../img/how-works-step3-bg-mobile.jpg) no-repeat;
 	margin-top: -12px;
     padding-top: 70px;
+    @include respond-to(tablet) {
+		background:url(../img/how-works-step3-bg.jpg) 50% no-repeat;
+		margin-top: 36px;
+		margin-right: 0;
+	};
 }

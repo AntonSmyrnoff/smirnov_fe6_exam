@@ -8,9 +8,7 @@
 	filter: contrast(120%);
 	@include respond-to(tablet) {
 		box-shadow: 0 0 0 350px rgba(26, 25, 21, 0.2) inset;
-		background: url(../img/header-bg.jpg) 50% no-repeat;
-		background-size: cover;
-
+		background-position-x: 50%;
 	};
 	/* @include respond-to(desktop) {
 		box-shadow: 0 0 0 350px rgba(26, 25, 21, 0.2) inset;
