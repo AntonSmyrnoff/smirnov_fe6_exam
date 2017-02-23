@@ -7,11 +7,12 @@
 		.partners__wrapper {
 			width: 66%;
 			margin: 32px auto;
+			margin-bottom: 0;
 		}
 		.partners__container {
 			width: 48%;
 			div:last-child {
-				margin-top: 39px;
+				margin-top: 57px;
 			}
 		}
 		.partners__container--left {
@@ -49,7 +50,7 @@
 		margin: 14px 44px 26px 36px;
     	line-height: 17px;
     	@include respond-to(tablet) {
-			margin: 13px 20px;
+			margin: 13px 2px;
 		}
 	}
 }
@@ -121,13 +122,13 @@
 .partners__button {
 	margin: 28px 11px 28px 7px;
 	@include respond-to(tablet) {
-			margin: 0 auto;
+			width: 192px;
+			margin: 24px auto;
 		}
 	a {
 		color: $bgColor;
 		border: 2px solid $bgColor;
 		padding: 11px;
-
 	}
 }
 

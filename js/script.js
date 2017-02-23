@@ -24,6 +24,8 @@ $(function () {
  
               createGrid( data.hits[i].tags, randomItem.previewURL );
 
+             $('.grid-item:eq(4)').addClass('grid-item--width2');
+             $('.grid-item:eq(5)').addClass('grid-item--width2');
              $(window).load( finishLoad );
              $('.grid-item').css({'right': 0, 'background-size': 'cover'});
             },
@@ -50,9 +52,10 @@ $(function () {
                 $.each(data.hits, function(i, val){
                       createGrid( data.hits[i].tags, data.hits[i].previewURL )
                 });
-
-                $(window).load( finishLoad );
-                $('.grid-item').css({'right': 0, 'background-size': 'cover'}); 
+                $('.grid-item:eq(4)').addClass('grid-item--width2');
+                $('.grid-item:eq(5)').addClass('grid-item--width2');
+                finishLoad ();
+                 
              },
       });
       $("#search-field").val('');    
@@ -76,15 +79,14 @@ $(function () {
   
   function finishLoad() {
     
-    $('.grid-item:eq(4)').addClass('grid-item--width2');
-    $('.grid-item:eq(5)').addClass('grid-item--width2');
-    $('.grid').isotope({
+    $('.grid').isotope('reloadItems').isotope({
                 itemSelector: '.grid-item',
                 percentPosition: true,
                 masonry: {
-                  columnWidth: '.grid-item--width2',
+                  columnWidth: '.grid-item',
                 }
-              }); 
+              });
+     $('.grid-item').css({'right': 0, 'background-size': 'cover'});
   };
 
 

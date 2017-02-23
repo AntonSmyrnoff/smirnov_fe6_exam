@@ -394,11 +394,12 @@ h2 {
       margin-top: 97px; }
       .partners .partners__wrapper {
         width: 66%;
-        margin: 32px auto; }
+        margin: 32px auto;
+        margin-bottom: 0; }
       .partners .partners__container {
         width: 48%; }
         .partners .partners__container div:last-child {
-          margin-top: 39px; }
+          margin-top: 57px; }
       .partners .partners__container--left {
         float: left; }
       .partners .partners__container--right {
@@ -430,7 +431,7 @@ h2 {
     } */ }
     @media only screen and (min-width: 416px) {
       .partners__item p {
-        margin: 13px 20px; } }
+        margin: 13px 2px; } }
 
 .partners__img {
   background-size: cover;
@@ -493,14 +494,21 @@ h2 {
   } */ }
   @media only screen and (min-width: 416px) {
     .partners__button {
-      margin: 0 auto; } }
+      width: 192px;
+      margin: 24px auto; } }
   .partners__button a {
     color: #ff4e50;
     border: 2px solid #ff4e50;
     padding: 11px; }
 
 .ideas__pictures {
-  margin-top: 15px; }
+  margin-top: 15px;
+  /* @else if $media == desktop {
+    @media only screen and (min-width: $large) { @content; }
+  } */ }
+  @media only screen and (min-width: 416px) {
+    .ideas__pictures {
+      margin-left: 2.3%; } }
 
 .ideas {
   margin-top: 35px; }
@@ -516,7 +524,16 @@ h2 {
   box-shadow: 0 0 0 150px rgba(26, 25, 21, 0.2) inset;
   filter: contrast(120%);
   display: table;
-  padding: 0 10px; }
+  padding: 0 10px;
+  /* @else if $media == desktop {
+    @media only screen and (min-width: $large) { @content; }
+  } */ }
+  @media only screen and (min-width: 416px) {
+    .grid-item {
+      width: 30.8%;
+      margin-right: 2.5%;
+      margin-bottom: 20px;
+      height: 311px; } }
   .grid-item a {
     font-family: "Montserrat Bold";
     font-size: 22px;
@@ -528,6 +545,26 @@ h2 {
     vertical-align: middle;
     text-transform: capitalize;
     line-height: 26px; }
+
+.grid-item:nth-child(3),
+.grid-item:nth-child(5),
+.grid-item:nth-child(7) {
+  /* @else if $media == desktop {
+    @media only screen and (min-width: $large) { @content; }
+  } */ }
+  @media only screen and (min-width: 416px) {
+    .grid-item:nth-child(3),
+    .grid-item:nth-child(5),
+    .grid-item:nth-child(7) {
+      margin-right: 0; } }
+
+.grid-item--width2 {
+  /* @else if $media == desktop {
+    @media only screen and (min-width: $large) { @content; }
+  } */ }
+  @media only screen and (min-width: 416px) {
+    .grid-item--width2 {
+      width: 64.1%; } }
 
 .search {
   margin-top: 28px;

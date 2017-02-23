@@ -1,5 +1,8 @@
 .ideas__pictures {
 	margin-top: 15px;
+	@include respond-to(tablet) {
+		margin-left: 2.3%;
+	}
 }
 
 .ideas {
@@ -7,7 +10,6 @@
 	h2 {
 		line-height: 25px;
 	}
-
 }
 
 .grid-item {
@@ -20,6 +22,12 @@
 	filter: contrast(120%);
 	display: table;
 	padding: 0 10px;
+	@include respond-to(tablet) {
+		width: 30.8%;
+		margin-right: 2.5%;
+		margin-bottom: 20px; 
+		height: 311px;
+	}
 	a {
 		@include headersText;
 		text-decoration: none;
@@ -30,4 +38,18 @@
 		text-transform: capitalize;
 		line-height: 26px;
 	}
+}
+
+.grid-item:nth-child(3),
+.grid-item:nth-child(5),
+.grid-item:nth-child(7) {
+	@include respond-to(tablet) {
+		margin-right: 0;
+	}
+}
+
+.grid-item--width2 {
+	@include respond-to(tablet) {
+		width: 64.1%;
+	}	
 }
