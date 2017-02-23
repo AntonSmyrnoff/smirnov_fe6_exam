@@ -383,8 +383,26 @@ h2 {
       margin-top: 36px;
       margin-right: 0; } }
 
+/* -----PARTNERS----- */
 .partners {
-  margin-top: 40px; }
+  margin-top: 40px;
+  /* @else if $media == desktop {
+    @media only screen and (min-width: $large) { @content; }
+  } */ }
+  @media only screen and (min-width: 416px) {
+    .partners {
+      margin-top: 97px; }
+      .partners .partners__wrapper {
+        width: 66%;
+        margin: 32px auto; }
+      .partners .partners__container {
+        width: 48%; }
+        .partners .partners__container div:last-child {
+          margin-top: 39px; }
+      .partners .partners__container--left {
+        float: left; }
+      .partners .partners__container--right {
+        float: right; } }
   .partners h2 {
     margin-left: -7px;
     line-height: 26px;
@@ -406,7 +424,13 @@ h2 {
     font-size: 14px;
     color: #666;
     margin: 14px 44px 26px 36px;
-    line-height: 17px; }
+    line-height: 17px;
+    /* @else if $media == desktop {
+      @media only screen and (min-width: $large) { @content; }
+    } */ }
+    @media only screen and (min-width: 416px) {
+      .partners__item p {
+        margin: 13px 20px; } }
 
 .partners__img {
   background-size: cover;
@@ -463,7 +487,13 @@ h2 {
     padding-left: 2px; }
 
 .partners__button {
-  margin: 28px 11px 28px 7px; }
+  margin: 28px 11px 28px 7px;
+  /* @else if $media == desktop {
+    @media only screen and (min-width: $large) { @content; }
+  } */ }
+  @media only screen and (min-width: 416px) {
+    .partners__button {
+      margin: 0 auto; } }
   .partners__button a {
     color: #ff4e50;
     border: 2px solid #ff4e50;
