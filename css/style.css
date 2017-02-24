@@ -501,6 +501,18 @@ h2 {
     border: 2px solid #ff4e50;
     padding: 11px; }
 
+/* -----IDEAS----- */
+.ideas {
+  margin-top: 35px;
+  /* @else if $media == desktop {
+    @media only screen and (min-width: $large) { @content; }
+  } */ }
+  .ideas h2 {
+    line-height: 25px; }
+  @media only screen and (min-width: 416px) {
+    .ideas {
+      margin-top: 97px; } }
+
 .ideas__pictures {
   margin-top: 15px;
   /* @else if $media == desktop {
@@ -508,12 +520,7 @@ h2 {
   } */ }
   @media only screen and (min-width: 416px) {
     .ideas__pictures {
-      margin-left: 2.3%; } }
-
-.ideas {
-  margin-top: 35px; }
-  .ideas h2 {
-    line-height: 25px; }
+      margin-top: 34px; } }
 
 .grid-item {
   height: 120px;
@@ -530,9 +537,8 @@ h2 {
   } */ }
   @media only screen and (min-width: 416px) {
     .grid-item {
-      width: 30.8%;
-      margin-right: 2.5%;
-      margin-bottom: 20px;
+      width: 31.5%;
+      margin-bottom: 19px;
       height: 311px; } }
   .grid-item a {
     font-family: "Montserrat Bold";
@@ -546,46 +552,63 @@ h2 {
     text-transform: capitalize;
     line-height: 26px; }
 
-.grid-item:nth-child(3),
-.grid-item:nth-child(5),
-.grid-item:nth-child(7) {
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
-  @media only screen and (min-width: 416px) {
-    .grid-item:nth-child(3),
-    .grid-item:nth-child(5),
-    .grid-item:nth-child(7) {
-      margin-right: 0; } }
-
 .grid-item--width2 {
   /* @else if $media == desktop {
     @media only screen and (min-width: $large) { @content; }
   } */ }
   @media only screen and (min-width: 416px) {
     .grid-item--width2 {
-      width: 64.1%; } }
+      width: 65.6%; } }
 
+/* -----SEARCH----- */
 .search {
   margin-top: 28px;
-  line-height: 25px; }
+  line-height: 25px;
+  /* @else if $media == desktop {
+    @media only screen and (min-width: $large) { @content; }
+  } */ }
+  @media only screen and (min-width: 416px) {
+    .search {
+      margin-top: 76px; } }
   .search p {
     font-family: "Roboto Light";
     font-size: 18px;
     color: #333;
-    margin-top: 10px; }
-  .search input {
-    width: 280px;
-    padding: 10px 13px;
-    box-sizing: border-box;
-    margin-top: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: "Roboto Light";
-    font-size: 14px;
-    color: #999; }
-    .search input:focus {
-      color: #333; }
+    margin-top: 10px;
+    /* @else if $media == desktop {
+      @media only screen and (min-width: $large) { @content; }
+    } */ }
+    @media only screen and (min-width: 416px) {
+      .search p {
+        margin-top: 30px; } }
+  .search .container > div {
+    /* @else if $media == desktop {
+      @media only screen and (min-width: $large) { @content; }
+    } */ }
+    @media only screen and (min-width: 416px) {
+      .search .container > div {
+        margin: 22px auto;
+        width: 415px; } }
+    .search .container > div input {
+      width: 280px;
+      padding: 10px 13px;
+      box-sizing: border-box;
+      margin-top: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: "Roboto Light";
+      font-size: 14px;
+      color: #999;
+      /* @else if $media == desktop {
+        @media only screen and (min-width: $large) { @content; }
+      } */ }
+      .search .container > div input:focus {
+        color: #333; }
+      @media only screen and (min-width: 416px) {
+        .search .container > div input {
+          margin-left: 3px;
+          width: 240px;
+          float: left; } }
 
 .search__button {
   margin: 9px auto;
@@ -595,16 +618,47 @@ h2 {
   background-color: #ff4e50;
   padding: 7px 0;
   border-radius: 20px;
-  cursor: pointer; }
+  cursor: pointer;
+  /* @else if $media == desktop {
+    @media only screen and (min-width: $large) { @content; }
+  } */ }
+  @media only screen and (min-width: 416px) {
+    .search__button {
+      width: 160px;
+      float: left;
+      margin: 14px 0 0 7px; } }
 
+/* -----FOOTER----- */
 .footer__divide {
   margin-top: 41px;
   height: 4px;
   width: 100%;
-  background-color: #ff4e50; }
+  background-color: #ff4e50;
+  /* @else if $media == desktop {
+    @media only screen and (min-width: $large) { @content; }
+  } */ }
+  @media only screen and (min-width: 416px) {
+    .footer__divide {
+      margin-top: 99px; } }
+
+footer .container {
+  /* @else if $media == desktop {
+    @media only screen and (min-width: $large) { @content; }
+  } */ }
+  @media only screen and (min-width: 416px) {
+    footer .container {
+      margin-top: 38px; } }
 
 .footer__logo {
-  margin-top: 18px; }
+  margin-top: 18px;
+  /* @else if $media == desktop {
+    @media only screen and (min-width: $large) { @content; }
+  } */ }
+  @media only screen and (min-width: 416px) {
+    .footer__logo {
+      float: left;
+      margin-left: 3.5%;
+      margin-top: 0; } }
   .footer__logo a {
     font-family: "Montserrat Bold";
     font-size: 16px;
@@ -612,23 +666,58 @@ h2 {
     letter-spacing: 1px;
     text-decoration: none; }
 
-.footer__links h4 {
-  font-family: "Montserrat Bold";
-  font-size: 22px;
-  color: #333;
-  font-size: 14px;
-  margin-top: 16px; }
-.footer__links ul {
-  list-style: none;
-  font-family: "Roboto Light";
-  font-size: 14px;
-  margin-top: 5px; }
-  .footer__links ul li {
-    display: inline-block;
-    margin-right: 10px; }
-    .footer__links ul li a {
-      text-decoration: none;
-      color: #666; }
+.footer__links {
+  /* @else if $media == desktop {
+    @media only screen and (min-width: $large) { @content; }
+  } */ }
+  @media only screen and (min-width: 416px) {
+    .footer__links {
+      float: left;
+      margin-left: 11%; } }
+  .footer__links:nth-child(3) {
+    /* @else if $media == desktop {
+      @media only screen and (min-width: $large) { @content; }
+    } */ }
+    @media only screen and (min-width: 416px) {
+      .footer__links:nth-child(3) {
+        margin-left: 14%; } }
+  .footer__links h4 {
+    font-family: "Montserrat Bold";
+    font-size: 22px;
+    color: #333;
+    font-size: 14px;
+    margin-top: 16px;
+    /* @else if $media == desktop {
+      @media only screen and (min-width: $large) { @content; }
+    } */ }
+    @media only screen and (min-width: 416px) {
+      .footer__links h4 {
+        margin-top: 0; } }
+  .footer__links ul {
+    list-style: none;
+    font-family: "Roboto Light";
+    font-size: 14px;
+    margin-top: 5px;
+    /* @else if $media == desktop {
+      @media only screen and (min-width: $large) { @content; }
+    } */ }
+    @media only screen and (min-width: 416px) {
+      .footer__links ul {
+        margin-top: 16px;
+        text-align: left; } }
+    .footer__links ul li {
+      display: inline-block;
+      margin-right: 10px;
+      /* @else if $media == desktop {
+        @media only screen and (min-width: $large) { @content; }
+      } */ }
+      @media only screen and (min-width: 416px) {
+        .footer__links ul li {
+          display: block;
+          margin-top: 10px; } }
+      .footer__links ul li a {
+        text-decoration: none;
+        color: #666; }
 
 .footer__designer {
   margin-top: 16px;
@@ -636,7 +725,15 @@ h2 {
   font-size: 10px;
   color: #ccc;
   text-transform: uppercase;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+  /* @else if $media == desktop {
+    @media only screen and (min-width: $large) { @content; }
+  } */ }
+  @media only screen and (min-width: 416px) {
+    .footer__designer {
+      float: right;
+      text-align: right;
+      margin-top: 0; } }
   .footer__designer img {
     margin-top: 8px; }
 

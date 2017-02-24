@@ -1,52 +1,91 @@
-
-	.footer__divide {
-		margin-top: 41px;
-		height: 4px;
-		width: 100%;
-		background-color: $bgColor;
+/* -----FOOTER----- */
+.footer__divide {
+	margin-top: 41px;
+	height: 4px;
+	width: 100%;
+	background-color: $bgColor;
+	@include respond-to(tablet) {
+		margin-top: 99px;
 	}
+}
 
-	.footer__logo {
-		margin-top: 18px;
-		a {
-			font-family: $textHeaders;
-			font-size: 16px;
-			color: $bgColor;
-		    letter-spacing: 1px;
-		    text-decoration: none;
+footer .container {
+	@include respond-to(tablet) {
+		margin-top: 38px;
+	}
+}
+
+.footer__logo {
+	margin-top: 18px;
+	@include respond-to(tablet) {
+		float: left;
+		margin-left: 3.5%;
+		margin-top: 0;
+	}
+	a {
+		font-family: $textHeaders;
+		font-size: 16px;
+		color: $bgColor;
+	    letter-spacing: 1px;
+	    text-decoration: none;
+	}
+}
+
+.footer__links {
+	@include respond-to(tablet) {
+		float: left;
+		margin-left: 11%;
+	}
+	&:nth-child(3) {
+		@include respond-to(tablet) {
+			margin-left: 14%;
+		}	
+	}
+	h4 {
+		@include headersText;
+		font-size: 14px;
+		margin-top: 16px;
+		@include respond-to(tablet) {
+			margin-top: 0;
 		}
 	}
-
-	.footer__links {
-		h4 {
-			@include headersText;
-			font-size: 14px;
+	ul {
+		list-style: none;
+		@include paragraph;
+		margin-top: 5px;
+		@include respond-to(tablet) {
 			margin-top: 16px;
+			text-align: left;
 		}
-		ul {
-			list-style: none;
-			@include paragraph;
-			margin-top: 5px;
-			li {
-				display: inline-block;
-				margin-right: 10px;
-				a {
-					text-decoration: none;
-					color: #666;
-				}
+		li {
+			display: inline-block;
+			margin-right: 10px;
+			@include respond-to(tablet) {
+				display: block;
+				margin-top: 10px;
+			}
+			a {
+				text-decoration: none;
+				color: #666;
 			}
 		}
 	}
+}
 
-	.footer__designer {
-		margin-top: 16px;
-		font-family: $textHeaders;
-		font-size: 10px;
-		color: #ccc;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		img {
-			margin-top: 8px;
-		}
-
+.footer__designer {
+	margin-top: 16px;
+	font-family: $textHeaders;
+	font-size: 10px;
+	color: #ccc;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	@include respond-to(tablet) {
+		float: right;
+		text-align: right;
+		margin-top: 0;
 	}
+	img {
+		margin-top: 8px;
+	}
+
+}

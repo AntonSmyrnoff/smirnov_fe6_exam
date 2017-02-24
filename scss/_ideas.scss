@@ -1,16 +1,22 @@
-.ideas__pictures {
-	margin-top: 15px;
-	@include respond-to(tablet) {
-		margin-left: 2.3%;
-	}
-}
-
+/* -----IDEAS----- */
 .ideas {
 	margin-top: 35px;
 	h2 {
 		line-height: 25px;
 	}
+	@include respond-to(tablet) {
+		margin-top: 97px;
+	}
 }
+
+
+.ideas__pictures {
+	margin-top: 15px;
+	@include respond-to(tablet) {
+		margin-top: 34px;
+	}
+}
+
 
 .grid-item {
 	height: 120px;
@@ -23,9 +29,8 @@
 	display: table;
 	padding: 0 10px;
 	@include respond-to(tablet) {
-		width: 30.8%;
-		margin-right: 2.5%;
-		margin-bottom: 20px; 
+		width: 31.5%;
+		margin-bottom: 19px; 
 		height: 311px;
 	}
 	a {
@@ -40,16 +45,8 @@
 	}
 }
 
-.grid-item:nth-child(3),
-.grid-item:nth-child(5),
-.grid-item:nth-child(7) {
-	@include respond-to(tablet) {
-		margin-right: 0;
-	}
-}
-
 .grid-item--width2 {
 	@include respond-to(tablet) {
-		width: 64.1%;
+		width: 65.6%;
 	}	
 }

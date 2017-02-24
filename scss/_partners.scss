@@ -22,8 +22,6 @@
 			float: right;
 		}
 	};
-	
-
 		
 	h2 {
 		margin-left: -7px;
@@ -122,9 +120,9 @@
 .partners__button {
 	margin: 28px 11px 28px 7px;
 	@include respond-to(tablet) {
-			width: 192px;
-			margin: 24px auto;
-		}
+		width: 192px;
+		margin: 24px auto;
+	}
 	a {
 		color: $bgColor;
 		border: 2px solid $bgColor;
