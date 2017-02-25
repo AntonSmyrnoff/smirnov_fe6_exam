@@ -5,6 +5,9 @@
     @include respond-to(tablet) {
     	margin-top: 76px;
     }
+     @include respond-to(desktop) {
+    	margin-top: 76px;
+    }
 	p {
 		font-family: $text;
 		font-size: 18px;
@@ -13,9 +16,16 @@
 		@include respond-to(tablet) {
     		margin-top: 30px;
     	}
+    	@include respond-to(desktop) {
+    		margin-top: 30px;
+    	}
 	}
 	.container>div {
 		@include respond-to(tablet) {
+    		margin: 22px auto;
+    		width: 415px;
+    	}
+    	@include respond-to(desktop) {
     		margin: 22px auto;
     		width: 415px;
     	}
@@ -36,6 +46,11 @@
 			    width: 240px;
 			    float: left;
 	    	}
+	    	@include respond-to(desktop) {
+	    		margin-left: 3px;
+			    width: 240px;
+			    float: left;
+	    	}
 		}
 	} 
 }
@@ -51,6 +66,11 @@
     @include respond-to(tablet) {
     	width: 160px;
 	    float: left;
-	    margin: 14px 0 0 7px;
+	    margin: 15px 0 0 7px;
+    }
+    @include respond-to(desktop) {
+    	width: 160px;
+	    float: left;
+	    margin: 15px 0 0 7px;
     }
 }

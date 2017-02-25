@@ -86,7 +86,7 @@ $(function () {
           itemSelector: '.grid-item',
           columnWidth: 300,
           fitRows: {
-              gutter: 20
+              gutter: 15
           }
       });
     } else {
@@ -95,7 +95,7 @@ $(function () {
             itemSelector:  '.grid-item',
             percentPosition: true,
             fitRows: {
-              gutter: 20
+              gutter: 18
             }
     });
 

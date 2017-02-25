@@ -7,10 +7,16 @@
 	@include respond-to(tablet) {
 		margin-top: 99px;
 	}
+	@include respond-to(desktop) {
+		margin-top: 99px;
+	}
 }
 
 footer .container {
 	@include respond-to(tablet) {
+		margin-top: 38px;
+	}
+	@include respond-to(desktop) {
 		margin-top: 38px;
 	}
 }
@@ -20,6 +26,11 @@ footer .container {
 	@include respond-to(tablet) {
 		float: left;
 		margin-left: 3.5%;
+		margin-top: 0;
+	}
+	@include respond-to(desktop) {
+		float: left;
+		margin-left: 0%;
 		margin-top: 0;
 	}
 	a {
@@ -36,16 +47,24 @@ footer .container {
 		float: left;
 		margin-left: 11%;
 	}
+	@include respond-to(desktop) {
+		float: left;
+		margin-left: 10%;
+		margin-top: 3px;
+	}
 	&:nth-child(3) {
 		@include respond-to(tablet) {
 			margin-left: 14%;
-		}	
+		}
 	}
 	h4 {
 		@include headersText;
 		font-size: 14px;
 		margin-top: 16px;
 		@include respond-to(tablet) {
+			margin-top: 0;
+		}
+		@include respond-to(desktop) {
 			margin-top: 0;
 		}
 	}
@@ -57,10 +76,18 @@ footer .container {
 			margin-top: 16px;
 			text-align: left;
 		}
+		@include respond-to(desktop) {
+			margin-top: 16px;
+			text-align: left;
+		}
 		li {
 			display: inline-block;
 			margin-right: 10px;
 			@include respond-to(tablet) {
+				display: block;
+				margin-top: 10px;
+			}
+			@include respond-to(desktop) {
 				display: block;
 				margin-top: 10px;
 			}
@@ -80,6 +107,11 @@ footer .container {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	@include respond-to(tablet) {
+		float: right;
+		text-align: right;
+		margin-top: 0;
+	}
+	@include respond-to(desktop) {
 		float: right;
 		text-align: right;
 		margin-top: 0;

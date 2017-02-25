@@ -7,12 +7,18 @@
 	@include respond-to(tablet) {
 		margin-top: 97px;
 	}
+	@include respond-to(desktop) {
+		margin-top: 97px;
+	}
 }
 
 
 .ideas__pictures {
 	margin-top: 15px;
 	@include respond-to(tablet) {
+		margin-top: 34px;
+	}
+	@include respond-to(desktop) {
 		margin-top: 34px;
 	}
 }
@@ -24,12 +30,17 @@
 	margin-bottom: 10px;
 	border-radius: 5px;
 	box-sizing: border-box;
-	box-shadow: 0 0 0 150px rgba(26, 25, 21, 0.2) inset;
+	box-shadow: 0 0 0 156px rgba(26, 25, 21, 0.2) inset;
 	filter: contrast(120%);
 	display: table;
 	padding: 0 10px;
 	@include respond-to(tablet) {
-		width: 31.5%;
+		width: 31.7%;
+		margin-bottom: 19px; 
+		height: 311px;
+	}
+	@include respond-to(desktop) {
+		width: 32%;
 		margin-bottom: 19px; 
 		height: 311px;
 	}
@@ -42,11 +53,16 @@
 		vertical-align: middle;
 		text-transform: capitalize;
 		line-height: 26px;
+		overflow: hidden;
+		width: 90%;
 	}
 }
 
 .grid-item--width2 {
 	@include respond-to(tablet) {
-		width: 65.6%;
+		width: 65.9%;
+	}
+	@include respond-to(desktop) {
+		width: 66%;
 	}	
 }
