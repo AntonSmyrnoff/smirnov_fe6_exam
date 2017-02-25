@@ -417,6 +417,22 @@ h2 {
         float: left; }
       .partners .partners__container--right {
         float: right; } }
+  @media only screen and (min-width: 769px) {
+    .partners {
+      margin-top: 97px; }
+      .partners .partners__wrapper {
+        width: 100%;
+        margin: 32px auto;
+        margin-bottom: 0; }
+      .partners .partners__container {
+        width: 49%; }
+        .partners .partners__container div:last-child {
+          margin-top: 0;
+          margin-left: 2%; }
+      .partners .partners__container--left {
+        float: left; }
+      .partners .partners__container--right {
+        float: right; } }
   .partners h2 {
     margin-left: -7px;
     line-height: 26px;
@@ -424,6 +440,10 @@ h2 {
 
 .partners__item {
   width: 100%; }
+  @media only screen and (min-width: 769px) {
+    .partners__item {
+      width: 49%;
+      float: left; } }
   .partners__item a {
     text-decoration: none;
     display: block; }
@@ -442,6 +462,9 @@ h2 {
     @media only screen and (min-width: 416px) and (max-width: 768px) {
       .partners__item p {
         margin: 13px 2px; } }
+    @media only screen and (min-width: 769px) {
+      .partners__item p {
+        margin: 13px 5px; } }
 
 .partners__img {
   background-size: cover;
@@ -500,6 +523,10 @@ h2 {
 .partners__button {
   margin: 28px 11px 28px 7px; }
   @media only screen and (min-width: 416px) and (max-width: 768px) {
+    .partners__button {
+      width: 192px;
+      margin: 24px auto; } }
+  @media only screen and (min-width: 769px) {
     .partners__button {
       width: 192px;
       margin: 24px auto; } }

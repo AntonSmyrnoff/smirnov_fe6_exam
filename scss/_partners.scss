@@ -22,6 +22,27 @@
 			float: right;
 		}
 	};
+	@include respond-to(desktop) {
+		margin-top: 97px;
+		.partners__wrapper {
+			width: 100%;
+			margin: 32px auto;
+			margin-bottom: 0;
+		}
+		.partners__container {
+			width: 49%;
+			div:last-child {
+				margin-top: 0;
+				margin-left: 2%;
+			}
+		}
+		.partners__container--left {
+			float: left;
+		}
+		.partners__container--right {
+			float: right;
+		}
+	};
 		
 	h2 {
 		margin-left: -7px;
@@ -32,6 +53,10 @@
 
 .partners__item {
 	width: 100%;
+	@include respond-to(desktop) {
+		width: 49%;
+		float: left;
+	}
 	a {
 		text-decoration: none;
 		display: block;
@@ -49,6 +74,9 @@
     	line-height: 17px;
     	@include respond-to(tablet) {
 			margin: 13px 2px;
+		}
+		@include respond-to(desktop) {
+			margin: 13px 5px;
 		}
 	}
 }
@@ -120,6 +148,10 @@
 .partners__button {
 	margin: 28px 11px 28px 7px;
 	@include respond-to(tablet) {
+		width: 192px;
+		margin: 24px auto;
+	}
+	@include respond-to(desktop) {
 		width: 192px;
 		margin: 24px auto;
 	}
