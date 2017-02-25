@@ -85,9 +85,9 @@ $(function () {
           layoutMode: 'fitRows',
           itemSelector: '.grid-item',
           columnWidth: 300,
-          fitRows: {
+          /*fitRows: {
               gutter: 15
-          }
+          }*/
       });
     } else {
         $('.grid').isotope({
@@ -102,7 +102,27 @@ $(function () {
     $('.grid').isotope('reloadItems').isotope();
     $('.grid-item').css({'right': 0, 'background-size': 'cover'});
     };
-  } 
+  }
+
+
+
+
+
+
+
+$('.jcarousel')
+    .on('jcarousel:create jcarousel:reload', function() {
+        var element = $(this),
+            width = element.innerWidth();
+
+        // This shows 1 item at a time.
+        // Divide `width` to the number of items you want to display,
+        // eg. `width = width / 3` to display 3 items at a time.
+        element.jcarousel('items').css('width', width + 'px');
+    })
+    .jcarousel({
+        wrap: 'circular',
+    });   
 
 
 

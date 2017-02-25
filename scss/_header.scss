@@ -19,7 +19,7 @@
 .promo__sign {
 	@include buttonText;
 	color: #fff;
-	padding: 32px 73px;
+	padding: 32px 73px 57px 73px;
 	@include respond-to(tablet) {
 		padding: 0;
 	    margin-top: 49px;
