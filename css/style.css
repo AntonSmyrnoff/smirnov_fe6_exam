@@ -133,24 +133,20 @@ table {
 body > * {
   margin: auto;
   box-sizing: border-box;
-  width: 100%;
-  max-width: 768px; }
+  width: 100%; }
 
 .container {
   margin: 0 auto;
   text-align: center;
-  width: 300px;
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */
-  /* @include respond-to(desktop) {
-  	width: 98%;
-  	max-width: 940px;
-  } */ }
-  @media only screen and (min-width: 416px) {
+  width: 300px; }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
     .container {
       width: 97%;
       max-width: 748px; } }
+  @media only screen and (min-width: 769px) {
+    .container {
+      width: 98%;
+      max-width: 940px; } }
 
 .clearfix {
   clear: both; }
@@ -161,14 +157,11 @@ h2 {
   color: #333; }
 
 .button {
-  width: 280px;
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */
-  /* @include respond-to(desktop) {
-  	width: 225px;
-  } */ }
-  @media only screen and (min-width: 416px) {
+  width: 280px; }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
+    .button {
+      width: 225px; } }
+  @media only screen and (min-width: 769px) {
     .button {
       width: 225px; } }
   .button a {
@@ -185,31 +178,32 @@ h2 {
   font-family: "Montserrat Bold";
   text-align: center;
   box-shadow: 0 0 0 270px rgba(26, 25, 21, 0.2) inset;
-  filter: contrast(120%);
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */
-  /* @include respond-to(desktop) {
-  	box-shadow: 0 0 0 350px rgba(26, 25, 21, 0.2) inset;
-  } */ }
-  @media only screen and (min-width: 416px) {
+  filter: contrast(120%); }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
     .promo {
       box-shadow: 0 0 0 350px rgba(26, 25, 21, 0.2) inset;
+      background-position-x: 50%; } }
+  @media only screen and (min-width: 769px) {
+    .promo {
+      box-shadow: 0 0 0 700px rgba(26, 25, 21, 0.2) inset;
       background-position-x: 50%; } }
 
 .promo__sign {
   font-family: "Montserrat Bold";
   font-size: 14px;
   color: #fff;
-  padding: 32px 73px;
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
-  @media only screen and (min-width: 416px) {
+  padding: 32px 73px; }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
     .promo__sign {
       padding: 0;
       margin-top: 49px;
       margin-right: 39px;
+      float: right; } }
+  @media only screen and (min-width: 769px) {
+    .promo__sign {
+      padding: 0;
+      margin-top: 49px;
+      margin-right: 1px;
       float: right; } }
   .promo__sign p {
     float: left; }
@@ -228,13 +222,14 @@ h2 {
   font-size: 20px;
   color: #fff;
   margin-top: 84px;
-  letter-spacing: 1px;
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
-  @media only screen and (min-width: 416px) {
+  letter-spacing: 1px; }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
     .promo__logo {
       margin: 48px 0 0 37px;
+      float: left; } }
+  @media only screen and (min-width: 769px) {
+    .promo__logo {
+      margin: 48px 0 0 0;
       float: left; } }
 
 .promo__tagline {
@@ -244,14 +239,18 @@ h2 {
     font-size: 30px;
     margin-top: 30px;
     line-height: 36px;
-    color: #fff;
-    /* @else if $media == desktop {
-      @media only screen and (min-width: $large) { @content; }
-    } */ }
-    @media only screen and (min-width: 416px) {
+    color: #fff; }
+    @media only screen and (min-width: 416px) and (max-width: 768px) {
       .promo__tagline h2 {
         font-size: 50px;
         margin: 141px 86px 0 86px;
+        line-height: 63px;
+        letter-spacing: 1.4px; } }
+    @media only screen and (min-width: 769px) {
+      .promo__tagline h2 {
+        font-size: 50px;
+        margin: 0 20%;
+        margin-top: 141px;
         line-height: 63px;
         letter-spacing: 1.4px; } }
   .promo__tagline p {
@@ -259,11 +258,13 @@ h2 {
     font-size: 18px;
     margin-top: 9px;
     padding: 0 34px;
-    line-height: 21px;
-    /* @else if $media == desktop {
-      @media only screen and (min-width: $large) { @content; }
-    } */ }
-    @media only screen and (min-width: 416px) {
+    line-height: 21px; }
+    @media only screen and (min-width: 416px) and (max-width: 768px) {
+      .promo__tagline p {
+        font-size: 24px;
+        margin-top: 27px;
+        padding: 0; } }
+    @media only screen and (min-width: 769px) {
       .promo__tagline p {
         font-size: 24px;
         margin-top: 27px;
@@ -271,14 +272,16 @@ h2 {
 
 .promo__button {
   margin: 16px 10px;
-  padding-bottom: 138px;
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
-  @media only screen and (min-width: 416px) {
+  padding-bottom: 138px; }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
     .promo__button {
       padding-bottom: 233px;
       margin: 38px auto; } }
+  @media only screen and (min-width: 769px) {
+    .promo__button {
+      padding-bottom: 233px;
+      margin: 38px auto;
+      width: 230px; } }
   .promo__button a {
     color: #fff;
     background-color: #ff4e50;
@@ -286,11 +289,8 @@ h2 {
 
 /* ----- HOW WORKS----- */
 .how-works {
-  margin-top: 31px;
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
-  @media only screen and (min-width: 416px) {
+  margin-top: 31px; }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
     .how-works {
       margin-top: 97px; } }
 
@@ -299,11 +299,8 @@ h2 {
   padding-left: 19px;
   border-radius: 4px;
   width: 100%;
-  box-sizing: border-box;
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
-  @media only screen and (min-width: 416px) {
+  box-sizing: border-box; }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
     .how-works__step {
       float: left;
       width: 31.5%;
@@ -338,22 +335,16 @@ h2 {
     margin-bottom: 20px;
     margin-right: 22px;
     line-height: 16px;
-    padding-bottom: 18px;
-    /* @else if $media == desktop {
-      @media only screen and (min-width: $large) { @content; }
-    } */ }
-    @media only screen and (min-width: 416px) {
+    padding-bottom: 18px; }
+    @media only screen and (min-width: 416px) and (max-width: 768px) {
       .how-works__step p {
         padding-bottom: 0; } }
 
 .how-works__step--step1 {
   background: url(../img/how-works-step1-bg-mobile.jpg) no-repeat;
   margin-top: 16px;
-  padding-top: 70px;
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
-  @media only screen and (min-width: 416px) {
+  padding-top: 70px; }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
     .how-works__step--step1 {
       background: url(../img/how-works-step1-bg.jpg) 50% no-repeat;
       margin-top: 36px; } }
@@ -361,11 +352,8 @@ h2 {
 .how-works__step--step2 {
   background: url(../img/how-works-step2-bg-mobile.jpg) no-repeat;
   margin-top: -11px;
-  padding-top: 100px;
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
-  @media only screen and (min-width: 416px) {
+  padding-top: 100px; }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
     .how-works__step--step2 {
       background: url(../img/how-works-step2-bg.jpg) 50% no-repeat;
       margin-top: 36px; } }
@@ -373,11 +361,8 @@ h2 {
 .how-works__step--step3 {
   background: url(../img/how-works-step3-bg-mobile.jpg) no-repeat;
   margin-top: -12px;
-  padding-top: 70px;
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
-  @media only screen and (min-width: 416px) {
+  padding-top: 70px; }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
     .how-works__step--step3 {
       background: url(../img/how-works-step3-bg.jpg) 50% no-repeat;
       margin-top: 36px;
@@ -385,11 +370,8 @@ h2 {
 
 /* -----PARTNERS----- */
 .partners {
-  margin-top: 40px;
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
-  @media only screen and (min-width: 416px) {
+  margin-top: 40px; }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
     .partners {
       margin-top: 97px; }
       .partners .partners__wrapper {
@@ -425,11 +407,8 @@ h2 {
     font-size: 14px;
     color: #666;
     margin: 14px 44px 26px 36px;
-    line-height: 17px;
-    /* @else if $media == desktop {
-      @media only screen and (min-width: $large) { @content; }
-    } */ }
-    @media only screen and (min-width: 416px) {
+    line-height: 17px; }
+    @media only screen and (min-width: 416px) and (max-width: 768px) {
       .partners__item p {
         margin: 13px 2px; } }
 
@@ -488,11 +467,8 @@ h2 {
     padding-left: 2px; }
 
 .partners__button {
-  margin: 28px 11px 28px 7px;
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
-  @media only screen and (min-width: 416px) {
+  margin: 28px 11px 28px 7px; }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
     .partners__button {
       width: 192px;
       margin: 24px auto; } }
@@ -503,22 +479,16 @@ h2 {
 
 /* -----IDEAS----- */
 .ideas {
-  margin-top: 35px;
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
+  margin-top: 35px; }
   .ideas h2 {
     line-height: 25px; }
-  @media only screen and (min-width: 416px) {
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
     .ideas {
       margin-top: 97px; } }
 
 .ideas__pictures {
-  margin-top: 15px;
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
-  @media only screen and (min-width: 416px) {
+  margin-top: 15px; }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
     .ideas__pictures {
       margin-top: 34px; } }
 
@@ -531,11 +501,8 @@ h2 {
   box-shadow: 0 0 0 150px rgba(26, 25, 21, 0.2) inset;
   filter: contrast(120%);
   display: table;
-  padding: 0 10px;
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
-  @media only screen and (min-width: 416px) {
+  padding: 0 10px; }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
     .grid-item {
       width: 31.5%;
       margin-bottom: 19px;
@@ -552,63 +519,46 @@ h2 {
     text-transform: capitalize;
     line-height: 26px; }
 
-.grid-item--width2 {
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
-  @media only screen and (min-width: 416px) {
-    .grid-item--width2 {
-      width: 65.6%; } }
+@media only screen and (min-width: 416px) and (max-width: 768px) {
+  .grid-item--width2 {
+    width: 65.6%; } }
 
 /* -----SEARCH----- */
 .search {
   margin-top: 28px;
-  line-height: 25px;
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
-  @media only screen and (min-width: 416px) {
+  line-height: 25px; }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
     .search {
       margin-top: 76px; } }
   .search p {
     font-family: "Roboto Light";
     font-size: 18px;
     color: #333;
-    margin-top: 10px;
-    /* @else if $media == desktop {
-      @media only screen and (min-width: $large) { @content; }
-    } */ }
-    @media only screen and (min-width: 416px) {
+    margin-top: 10px; }
+    @media only screen and (min-width: 416px) and (max-width: 768px) {
       .search p {
         margin-top: 30px; } }
-  .search .container > div {
-    /* @else if $media == desktop {
-      @media only screen and (min-width: $large) { @content; }
-    } */ }
-    @media only screen and (min-width: 416px) {
-      .search .container > div {
-        margin: 22px auto;
-        width: 415px; } }
-    .search .container > div input {
-      width: 280px;
-      padding: 10px 13px;
-      box-sizing: border-box;
-      margin-top: 14px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-family: "Roboto Light";
-      font-size: 14px;
-      color: #999;
-      /* @else if $media == desktop {
-        @media only screen and (min-width: $large) { @content; }
-      } */ }
-      .search .container > div input:focus {
-        color: #333; }
-      @media only screen and (min-width: 416px) {
-        .search .container > div input {
-          margin-left: 3px;
-          width: 240px;
-          float: left; } }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
+    .search .container > div {
+      margin: 22px auto;
+      width: 415px; } }
+  .search .container > div input {
+    width: 280px;
+    padding: 10px 13px;
+    box-sizing: border-box;
+    margin-top: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: "Roboto Light";
+    font-size: 14px;
+    color: #999; }
+    .search .container > div input:focus {
+      color: #333; }
+    @media only screen and (min-width: 416px) and (max-width: 768px) {
+      .search .container > div input {
+        margin-left: 3px;
+        width: 240px;
+        float: left; } }
 
 .search__button {
   margin: 9px auto;
@@ -618,11 +568,8 @@ h2 {
   background-color: #ff4e50;
   padding: 7px 0;
   border-radius: 20px;
-  cursor: pointer;
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
-  @media only screen and (min-width: 416px) {
+  cursor: pointer; }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
     .search__button {
       width: 160px;
       float: left;
@@ -633,28 +580,18 @@ h2 {
   margin-top: 41px;
   height: 4px;
   width: 100%;
-  background-color: #ff4e50;
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
-  @media only screen and (min-width: 416px) {
+  background-color: #ff4e50; }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
     .footer__divide {
       margin-top: 99px; } }
 
-footer .container {
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
-  @media only screen and (min-width: 416px) {
-    footer .container {
-      margin-top: 38px; } }
+@media only screen and (min-width: 416px) and (max-width: 768px) {
+  footer .container {
+    margin-top: 38px; } }
 
 .footer__logo {
-  margin-top: 18px;
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
-  @media only screen and (min-width: 416px) {
+  margin-top: 18px; }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
     .footer__logo {
       float: left;
       margin-left: 3.5%;
@@ -666,58 +603,41 @@ footer .container {
     letter-spacing: 1px;
     text-decoration: none; }
 
-.footer__links {
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
-  @media only screen and (min-width: 416px) {
-    .footer__links {
-      float: left;
-      margin-left: 11%; } }
+@media only screen and (min-width: 416px) and (max-width: 768px) {
+  .footer__links {
+    float: left;
+    margin-left: 11%; } }
+@media only screen and (min-width: 416px) and (max-width: 768px) {
   .footer__links:nth-child(3) {
-    /* @else if $media == desktop {
-      @media only screen and (min-width: $large) { @content; }
-    } */ }
-    @media only screen and (min-width: 416px) {
-      .footer__links:nth-child(3) {
-        margin-left: 14%; } }
-  .footer__links h4 {
-    font-family: "Montserrat Bold";
-    font-size: 22px;
-    color: #333;
-    font-size: 14px;
-    margin-top: 16px;
-    /* @else if $media == desktop {
-      @media only screen and (min-width: $large) { @content; }
-    } */ }
-    @media only screen and (min-width: 416px) {
-      .footer__links h4 {
-        margin-top: 0; } }
-  .footer__links ul {
-    list-style: none;
-    font-family: "Roboto Light";
-    font-size: 14px;
-    margin-top: 5px;
-    /* @else if $media == desktop {
-      @media only screen and (min-width: $large) { @content; }
-    } */ }
-    @media only screen and (min-width: 416px) {
-      .footer__links ul {
-        margin-top: 16px;
-        text-align: left; } }
-    .footer__links ul li {
-      display: inline-block;
-      margin-right: 10px;
-      /* @else if $media == desktop {
-        @media only screen and (min-width: $large) { @content; }
-      } */ }
-      @media only screen and (min-width: 416px) {
-        .footer__links ul li {
-          display: block;
-          margin-top: 10px; } }
-      .footer__links ul li a {
-        text-decoration: none;
-        color: #666; }
+    margin-left: 14%; } }
+.footer__links h4 {
+  font-family: "Montserrat Bold";
+  font-size: 22px;
+  color: #333;
+  font-size: 14px;
+  margin-top: 16px; }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
+    .footer__links h4 {
+      margin-top: 0; } }
+.footer__links ul {
+  list-style: none;
+  font-family: "Roboto Light";
+  font-size: 14px;
+  margin-top: 5px; }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
+    .footer__links ul {
+      margin-top: 16px;
+      text-align: left; } }
+  .footer__links ul li {
+    display: inline-block;
+    margin-right: 10px; }
+    @media only screen and (min-width: 416px) and (max-width: 768px) {
+      .footer__links ul li {
+        display: block;
+        margin-top: 10px; } }
+    .footer__links ul li a {
+      text-decoration: none;
+      color: #666; }
 
 .footer__designer {
   margin-top: 16px;
@@ -725,11 +645,8 @@ footer .container {
   font-size: 10px;
   color: #ccc;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  /* @else if $media == desktop {
-    @media only screen and (min-width: $large) { @content; }
-  } */ }
-  @media only screen and (min-width: 416px) {
+  letter-spacing: 1px; }
+  @media only screen and (min-width: 416px) and (max-width: 768px) {
     .footer__designer {
       float: right;
       text-align: right;

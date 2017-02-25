@@ -2,7 +2,6 @@ body>* {
 	margin: auto;
 	box-sizing: border-box;
 	width: 100%;
-	max-width: 768px;// удалить после завершения верстки для планшета
 }
 
 .container {
@@ -13,10 +12,10 @@ body>* {
 		width: 97%;
 		max-width: 748px
 	};
-	/* @include respond-to(desktop) {
+	@include respond-to(desktop) {
 		width: 98%;
 		max-width: 940px;
-	} */
+	}
 }
 
 .clearfix {
@@ -32,9 +31,9 @@ h2 {
 	@include respond-to(tablet) {
 		width: 225px;
 	};
-	/* @include respond-to(desktop) {
+	@include respond-to(desktop) {
 		width: 225px;
-	} */
+	}
 	a {
 		display: block;
 		@include buttonText;
