@@ -9,29 +9,19 @@
 	};
 }
 
+
 .how-works__step {
 	text-align: left;
-	border-radius: 4px;
 	width: 100%;
 	box-sizing: border-box;
 	position: relative;
 	margin-top: 16px;
-	&:nth-child(3) {
-		margin-top: 10px;
-		.how-works__text-block {
-			top: 99px;
-		}
-	}
-	&:nth-child(4) {
-		margin-top: 10px;
-	}
 	@include respond-to(tablet) {
 		float: left;
     	width: 31.5%;
     	height: 400px;
     	margin-right: 2.75%;
     	margin-top: 36px;
-    	padding-left: 2%;
     	position: relative;
 	};
 	@include respond-to(desktop) {
@@ -42,6 +32,37 @@
     	margin-top: 36px;
     	position: relative;
 	};
+}
+
+.how-works__step--step2 {
+	margin-top: 10px;
+	@include respond-to(tablet) {
+		margin-top: 36px;
+	}
+	@include respond-to(desktop) {
+		margin-top: 36px;
+	}
+	/* .how-works__text-block {
+		top: 99px;
+		@include respond-to(tablet) {
+			top: 259px;
+		}
+		@include respond-to(desktop) {
+			top: 259px;
+		}
+	} */
+}
+
+.how-works__step--step3 {
+	margin-top: 10px;
+	@include respond-to(tablet) {
+		margin-right: 0;
+		margin-top: 36px;
+	}
+	@include respond-to(desktop) {
+		margin-right: 0;
+		margin-top: 36px;
+	}
 }
 
 .jcarousel {
@@ -58,20 +79,56 @@
 	li {
 		float: left;
     	height: 240px;
+		border-radius: 4px;
+    	@include respond-to(tablet) {
+			height: 400px;
+		}
+		@include respond-to(desktop) {
+			height: 400px;
+		}
 	}
+}
+
+.jcarousel__item--step1 {
+	background:url(../img/how-works-step1-bg-mobile.jpg) no-repeat;
+	@include respond-to(tablet) {
+		background:url(../img/how-works-step1-bg.jpg) 50% no-repeat;
+	};
+	@include respond-to(desktop) {
+		background:url(../img/how-works-step1-bg.jpg) 50% no-repeat;
+	};
+
+}
+
+.jcarousel__item--step2 {
+	background:url(../img/how-works-step2-bg-mobile.jpg) no-repeat;
+    @include respond-to(tablet) {
+		background:url(../img/how-works-step2-bg.jpg) 50% no-repeat;
+	};
+	@include respond-to(desktop) {
+		background:url(../img/how-works-step2-bg.jpg) 50% no-repeat;
+	};
+}
+
+.jcarousel__item--step3 {
+	background:url(../img/how-works-step3-bg-mobile.jpg) no-repeat;
+    @include respond-to(tablet) {
+		background:url(../img/how-works-step3-bg.jpg) 50% no-repeat;
+	};
+	 @include respond-to(desktop) {
+		background:url(../img/how-works-step3-bg.jpg) 50% no-repeat;
+	};
 }
 
 .how-works__text-block {
 	position: absolute;
-	top: 70px;
-	left: 19px;
+	bottom: -21px;
+	left: 7%;
 	@include respond-to(tablet) {
-		position: absolute;
-		bottom: 0;
+		bottom: -3px;
 		width: 95%;
 	}
 	@include respond-to(desktop) {
-		position: absolute;
 		bottom: -3px;
 		width: 96%;
 	}	
@@ -107,43 +164,4 @@
 			padding-bottom: 0;
 		};
 	}
-}
-
-.how-works__step--step1 {
-	background:url(../img/how-works-step1-bg-mobile.jpg) no-repeat;
-	@include respond-to(tablet) {
-		background:url(../img/how-works-step1-bg.jpg) 50% no-repeat;
-/* 		margin-top: 36px; */
-	};
-	@include respond-to(desktop) {
-		background:url(../img/how-works-step1-bg.jpg) 50% no-repeat;
-/* 		margin-top: 36px; */
-	};
-
-}
-
-.how-works__step--step2 {
-	background:url(../img/how-works-step2-bg-mobile.jpg) no-repeat;
-    @include respond-to(tablet) {
-		background:url(../img/how-works-step2-bg.jpg) 50% no-repeat;
-/* 		margin-top: 36px; */
-	};
-	@include respond-to(desktop) {
-		background:url(../img/how-works-step2-bg.jpg) 50% no-repeat;
-/* 		margin-top: 36px; */
-	};
-}
-
-.how-works__step--step3 {
-	background:url(../img/how-works-step3-bg-mobile.jpg) no-repeat;
-    @include respond-to(tablet) {
-		background:url(../img/how-works-step3-bg.jpg) 50% no-repeat;
-/* 		margin-top: 36px;
-margin-right: 0; */
-	};
-	 @include respond-to(desktop) {
-		background:url(../img/how-works-step3-bg.jpg) 50% no-repeat;
-/* 		margin-top: 36px;
-margin-right: 0; */
-	};
 }
