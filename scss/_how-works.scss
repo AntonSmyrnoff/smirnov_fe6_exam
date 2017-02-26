@@ -42,15 +42,6 @@
 	@include respond-to(desktop) {
 		margin-top: 36px;
 	}
-	/* .how-works__text-block {
-		top: 99px;
-		@include respond-to(tablet) {
-			top: 259px;
-		}
-		@include respond-to(desktop) {
-			top: 259px;
-		}
-	} */
 }
 
 .how-works__step--step3 {
@@ -118,6 +109,28 @@
 	 @include respond-to(desktop) {
 		background:url(../img/how-works-step3-bg.jpg) 50% no-repeat;
 	};
+}
+
+.jcarousel-prev, .jcarousel-next {
+	position: absolute;
+	top: 150px;
+	height: 55px;
+    width: 30px;
+    @include respond-to(mobile) {
+    	display: none;
+    }
+}
+
+.jcarousel-prev {
+    background: url(../img/carousel-arrows.png);
+    left: 20px;
+    z-index: 10;
+}
+
+.jcarousel-next {
+    background: url(../img/carousel-arrows.png) 0 -30px;
+    right: 20px;
+    z-index: 10;
 }
 
 .how-works__text-block {

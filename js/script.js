@@ -5,6 +5,8 @@ $(function () {
   $("#search-field").keypress(function(e) { //запуск поиска по нажатию Enter;
            if(e.keyCode==13) searchPic()
          });
+
+  carousel();
 });
 
   
@@ -104,13 +106,8 @@ $(function () {
     };
   }
 
-
-
-
-
-
-
-$('.jcarousel')
+function carousel() {
+  $('.jcarousel')
     .on('jcarousel:create jcarousel:reload', function() {
         var element = $(this),
             width = element.innerWidth();
@@ -122,7 +119,17 @@ $('.jcarousel')
     })
     .jcarousel({
         wrap: 'circular',
-    });   
+    });  
+
+    $('.jcarousel-prev').jcarouselControl({
+        target: '-=1'
+    });
+
+    $('.jcarousel-next').jcarouselControl({
+        target: '+=1'
+    });
+};
+
 
 
 
