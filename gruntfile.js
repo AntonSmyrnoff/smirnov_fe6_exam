@@ -7,23 +7,54 @@ module.exports = function(grunt) {
 	        expand: true,
 	        cwd: 'scss',
 	        src: ['*.scss'],
-	        dest: 'css',
+	        dest: 'css/src',
 	        ext: '.css'
 	      }]
 	    }
 	  },
+	  
 	  watch: {
         sass: {
-          // We watch and compile sass files as normal but don't live reload here
           files: ['scss/*.scss'],
-          tasks: ['sass'],
+          tasks: ['sass', 'cssmin'],
         },
+
+        uglify: {
+          files: ['js/src/script.js'],
+          tasks: ['uglify'],	
+        },
+
+        /*cssmin: {
+          files: ['scss/*.scss'],
+          tasks: ['cssmin'],	
+        },*/
+    },
+
+    uglify: {
+    	dist: {
+        src: ['js/src/script.js'],
+        dest: 'js/script.min.js'
+      }
+    },
+
+    cssmin: {
+      options: {
+        shorthandCompacting: false,
+        roundingPrecision: -1
+      },
+      target: {
+        files: {
+          'css/style.min.css': ['css/src/style.css']
+        }
+      }
     }
 });
 	  
 
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
 
 
   grunt.registerTask('default', ['watch']);
