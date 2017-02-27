@@ -15,6 +15,7 @@ $(function () {
                 'winter', 'summer', 'autumn', 'river', 'mountain', 'office', 'new york', 'waterfall', 'africa', 'america', 
                 'castle', 'horse', 'children', 'school', 'snow', 'sun', 'space']; // массив из текста запросов для отображения случайных изображений при первой загрузке страницы
     
+    var count = 0; //для корректной работы в IE используем счетчик
     for (var i=0; i<7; i++) {
     var rand = Math.floor(Math.random()*arr.length);// формируем индекс случайного значения из массива arr
      
@@ -28,8 +29,36 @@ $(function () {
 
              $('.grid-item:eq(4)').addClass('grid-item--width2');
              $('.grid-item:eq(5)').addClass('grid-item--width2');
-             $(window).load( finishLoad );
-             $('.grid-item').css({'right': 0, 'background-size': 'cover'});
+             count+=1;
+             
+            var $grid = $('.grid');
+
+             if (count===7) {
+                if($(window).width() <= 415){
+                  $grid.isotope({
+                      layoutMode: 'fitRows',
+                      itemSelector: '.grid-item',
+                      columnWidth: 300,
+                      fitRows: {
+                          gutter: 18
+                        }
+                  });
+                  $grid.isotope('reloadItems').isotope();
+                } else {
+                    $grid.isotope({
+                        layoutMode: 'fitRows',
+                        itemSelector:  '.grid-item',
+                        percentPosition: true,
+                        fitRows: {
+                          gutter: 18  
+                        },
+                });
+
+                $grid.isotope('reloadItems').isotope();
+                };
+              };
+
+             $('.grid-item').css({'background-size': 'cover'});
             },
         });
     }
@@ -57,9 +86,32 @@ $(function () {
                 $('.grid-item:eq(4)').addClass('grid-item--width2');
                 $('.grid-item:eq(5)').addClass('grid-item--width2');
 
+                var $grid = $('.grid');
                
-                finishLoad();
-             },
+                if($(window).width() <= 415){
+                  $grid.isotope({
+                      layoutMode: 'fitRows',
+                      itemSelector: '.grid-item',
+                      columnWidth: 300,
+                      fitRows: {
+                          gutter: 18
+                        }
+                  });
+                  $grid.isotope('reloadItems').isotope();
+                } else {
+                    $grid.isotope({
+                        layoutMode: 'fitRows',
+                        itemSelector:  '.grid-item',
+                        percentPosition: true,
+                        fitRows: {
+                          gutter: 18
+                        }
+                });
+
+                $grid.isotope('reloadItems').isotope();
+                };
+              $('.grid-item').css({'background-size': 'cover'});
+            },
       });
       $("#search-field").val('');    
   };
@@ -68,7 +120,6 @@ $(function () {
   function createGrid(data, url) {
     
     var div = document.createElement("div");
-    /*div.classList.add('grid-item');*/
     div.className += " grid-item"
     div.style.background = 'url('+url+') 50% no-repeat';
     var a = document.createElement("a");
@@ -79,42 +130,13 @@ $(function () {
     $('#wrapper').append(div);
   };
 
-  
-  function finishLoad() {
-    
-    if($(window).width() <= 415){
-      $('.grid').isotope({
-          layoutMode: 'fitRows',
-          itemSelector: '.grid-item',
-          columnWidth: 300,
-          /*fitRows: {
-              gutter: 15
-          }*/
-      });
-    } else {
-        $('.grid').isotope({
-            layoutMode: 'fitRows',
-            itemSelector:  '.grid-item',
-            percentPosition: true,
-            fitRows: {
-              gutter: 18
-            }
-    });
 
-    $('.grid').isotope('reloadItems').isotope();
-    $('.grid-item').css({'right': 0, 'background-size': 'cover'});
-    };
-  }
 
 function carousel() {
   $('.jcarousel')
     .on('jcarousel:create jcarousel:reload', function() {
         var element = $(this),
-            width = element.innerWidth();
-
-        // This shows 1 item at a time.
-        // Divide `width` to the number of items you want to display,
-        // eg. `width = width / 3` to display 3 items at a time.
+        width = element.innerWidth();
         element.jcarousel('items').css('width', width + 'px');
     })
     .jcarousel({

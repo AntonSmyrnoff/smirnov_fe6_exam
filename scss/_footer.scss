@@ -12,7 +12,7 @@
 	}
 }
 
-footer .container {
+.footer .container {
 	@include respond-to(tablet) {
 		margin-top: 38px;
 	}
